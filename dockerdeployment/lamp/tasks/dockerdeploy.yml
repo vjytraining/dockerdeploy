@@ -1,0 +1,12 @@
+---
+- name: copying script to localhost
+  copy:
+       src: deployscript.sh
+       dest: /deployscript.sh
+       mode: 0777
+
+- name: execute the script
+  become: true
+  command: sh /deployscript.sh
+
+
